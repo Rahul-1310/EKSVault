@@ -1,6 +1,6 @@
 {
   "source": ["aws.ec2"],
-  "detail": (
+  "detail": {
     "awsRegion": ["us-east-1"],
     "responseElements":
       "networkInterface":
