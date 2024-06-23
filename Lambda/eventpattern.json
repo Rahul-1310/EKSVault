@@ -20,6 +20,6 @@
   },
   "request Parameters": {
     "description": ["Amazon EKS ‹your clustername›"]
-I    }
+  }
 }
 }
