@@ -39,4 +39,26 @@ def register_targets (newtargets):
             'Port': 443
             }
           ],
+          WaiterConfig-f
+'Delay': 120,
+'MaxAttempts': 4
+except ClientError as e:
+return e
+except Exception as e:
+return ("some unknown error occured")
+return( "Registered new target () successfully" format (newtargets))
+def deregister_targets(unhealthytargets):
+for ip in unhealthytargets:
+print("DeRegistering unhealthy target ()". format(ip))
+targetreponse = elb. deregister_targets(
+TargetGroupArn=tg_arn,
+Targets=[
+'Id': ip,
+'Port': 443
+print("DeRegistered unhealthy targets ()". format (unhealthytargets))
+def lambda_handler (event, context):
+newtargets = list(event["detail"]["responseElements"] ["networkInterface"] ("privatelpAddress"],split ("-"))
+res=register_targets (newtargets)
+print("status of registering targets - ()". format(res))
+deregister_targets(unhealthytargets)
             
